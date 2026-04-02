@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Team</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<script src="sort.js"></script>
+</head>
+<body>
+	<!-- LEFT NAVIGATION -->
+	<div class="nav-left">
+		<div onclick="window.location.href='index.html'"><img src="images/KosmosWorkforceLogoWhite.png" width="184px" height="auto"></div>
+		<div onclick="window.location.href='index.html'">
+			<svg xmlns="http://www.w3.org/2000/svg" 
+				width="24" height="24" viewBox="0 0 24 24" fill="none" 									stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+				aria-hidden="true">
+				<rect width="7" height="9" x="3" y="3" rx="1"></rect>
+				<rect width="7" height="5" x="14" y="3" rx="1"></rect>
+				<rect width="7" height="9" x="14" y="12" rx="1"></rect>
+				<rect width="7" height="5" x="3" y="16" rx="1"></rect>
+			</svg>&nbsp;
+			Dashboard
+		</div>	
+		<div onclick="window.location.href='team.html'" style="font-weight: bold; background-color: #ffffff50">
+			<svg xmlns="http://www.w3.org/2000/svg" 
+				width="24" height="24" viewBox="0 0 24 24" fill="none" 
+				stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+				aria-hidden="true">
+				<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+				<path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+				<circle cx="9" cy="7" r="4"></circle>
+			</svg>&nbsp;
+			Employees
+		</div>
+		<div>
+			<svg xmlns="http://www.w3.org/2000/svg"
+				width="24" height="24" viewBox="0 0 24 24" fill="none"
+				stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+				aria-hidden="true">
+				<path d="m16 6 4 14"></path>
+				<path d="M12 6v14"></path>
+				<path d="M8 8v12"></path>
+				<path d="M4 4v16"></path>
+			</svg>&nbsp;
+			Assessment Library
+		</div>
+		<div>
+			<svg xmlns="http://www.w3.org/2000/svg" 
+				width="24" height="24" viewBox="0 0 24 24" fill="none" 
+				stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+				aria-hidden="true">
+				<rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
+				<path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+				<path d="M12 11h4"></path>
+				<path d="M12 16h4"></path>
+				<path d="M8 11h.01"></path><path d="M8 16h.01"></path>
+			</svg>&nbsp;
+			Assignments
+		</div>
+		<div>
+			<svg xmlns="http://www.w3.org/2000/svg" 
+				width="24" height="24" viewBox="0 0 24 24" fill="none" 
+				stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+				aria-hidden="true">
+				<path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+				<path d="M18 17V9"></path>
+				<path d="M13 17V5"></path>
+				<path d="M8 17v-3"></path>
+			</svg>&nbsp;
+			Results
+		</div>
+		<div style="position: absolute; bottom: 0; padding-top: 16px; border-top: 4px solid #ffffff50; width: 200px;">
+			<svg xmlns="http://www.w3.org/2000/svg"
+				width="24" height="24" viewBox="0 0 24 24" fill="none"
+				stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+				aria-hidden="true">
+				<path d="m16 17 5-5-5-5"></path><path d="M21 12H9"></path>
+				<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+			</svg>&nbsp;
+			Sign Out
+		</div>
+	</div><!-- END OF NAVIGATION PANE -->
+
+	<!-- Main Content Section -->
+	<div class="main">
+		<h2>Employees</h2>
+		<hr size="1" />
+		<div>
+			<div style="float: left;">
+				<button type="button" class="tab selected">Employees</button>
+				<!-- Admins don't need a separate tab
+				<button type="button" class="tab">Admins</button>
+				-->
+				<button type="button" class="tab">Pending</button>
+			</div>
+			<div style="float: right;">
+				<button type="button">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+						aria-hidden="true">
+						<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+						<circle cx="9" cy="7" r="4"></circle>
+						<line x1="19" x2="19" y1="8" y2="14"></line>
+						<line x1="22" x2="16" y1="11" y2="11"></line>
+					</svg>
+					Add Employee
+				</button>
+				<!-- Admin would be a check on employee page
+				<button type="button" style="background-color: var(--secondary-color);">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" 
+						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+						aria-hidden="true">
+						<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+						<path d="M9 12h6"></path>
+						<path d="M12 9v6"></path>
+					</svg>
+					Add Admin
+				</button>
+				-->
+			</div>
+		</div>
+
+		<div class="card-container">
+			<div class="card" style="flex: 1">
+				<table id="myTable" style="margin-top: 16px;">
+					<thead>
+						<tr>
+							<th onclick="sortTable(0)">Employee</th>
+							<th onclick="sortTable(1)">Email</th>
+							<th onclick="sortTable(2)">Joined</th>
+						</tr>
+					</thead>
+					<tbody>	
+						<tr>
+							<td>Maya Patel</td>
+							<td>maya.patel@mycompany.com</td>
+							<td>08/14/2019</td>
+						</tr>
+						<tr>
+							<td>Liam Ramirez</td>
+							<td>liam.ramirez@mycompany.com</td>
+							<td>02/22/2021</td>
+						</tr>
+						<tr>
+							<td>Chloe Bennett</td>
+							<td>chloe.bennett@mycompany.com</td>
+							<td>11/05/2018</td>
+						</tr>
+						<tr>
+							<td>Ethan Nguyen</td>
+							<td>ethan.nguyen@mycompany.com</td>
+							<td>06/17/2024</td>
+						</tr>
+						<tr>
+							<td>Olivia Jones</td>
+							<td>olivia.jones@mycompany.com</td>
+							<td>03/10/2020</td>
+						</tr>
+						<tr>
+							<td>Alexander Kim</td>
+							<td>alexander.kim@mycompany.com</td>
+							<td>09/25/2022</td>
+						</tr>
+						<tr>
+							<td>Sophia Garcia</td>
+							<td>sophia.garcia@mycompany.com</td>
+							<td>01/13/2019</td>
+						</tr>
+						<tr>
+							<td>Noah Miller</td>
+							<td>noah.miller@mycompany.com</td>
+							<td>07/04/2025</td>
+						</tr>
+						<tr>
+							<td>Anna Brown</td>
+							<td>anna.brown@mycompany.com</td>
+							<td>12/30/2020</td>
+						</tr>
+						<tr>
+							<td>William Johnson</td>
+							<td>william.johnson@mycompany.com</td>
+							<td>04/19/2023</td>
+						</tr>
+						<tr>
+							<td>Luna Davis</td>
+							<td>luna.davis@mycompany.com</td>
+							<td>10/11/2018</td>
+						</tr>
+						<tr>
+							<td>Matthew Hernandez</td>
+							<td>matthew.hernandez@mycompany.com</td>
+							<td>05/28/2024</td>
+						</tr>
+						<tr>
+							<td>Evelyn Moore</td>
+							<td>evelyn.moore@mycompany.com</td>
+							<td>02/09/2021</td>
+						</tr>
+						<tr>
+							<td>Michael Lee</td>
+							<td>michael.lee@mycompany.com</td>
+							<td>08/31/2019</td>
+						</tr>
+						<tr>
+							<td>Stella Robinson</td>
+							<td>stella.robinson@mycompany.com</td>
+							<td>11/15/2022</td>
+						</tr>
+						<tr>
+							<td>Lucas Lopez</td>
+							<td>lucas.lopez@mycompany.com</td>
+							<td>03/02/2025</td>
+						</tr>
+						<tr>
+							<td>Penelope Jackson</td>
+							<td>penelope.jackson@mycompany.com</td>
+							<td>06/20/2020</td>
+						</tr>
+						<tr>
+							<td><a href="individual.html">Benjamin Lewis</a></td>
+							<td>benjamin.lewis@mycompany.com</td>
+							<td>09/08/2023</td>
+						</tr>
+						<tr>
+							<td>Amelia Walker</td>
+							<td>amelia.walker@mycompany.com</td>
+							<td>01/27/2019</td>
+						</tr>
+						<tr>
+							<td>David Wilson</td>
+							<td>david.wilson@mycompany.com</td>
+							<td>12/05/2024</td>
+						</tr>
+						<tr>
+							<td>Charlotte Clark</td>
+							<td>charlotte.clark@mycompany.com</td>
+							<td>09/14/2019</td>
+						</tr>
+						<tr>
+							<td>Daniel Young</td>
+							<td>daniel.young@mycompany.com</td>
+							<td>03/22/2021</td>
+						</tr>
+						<tr>
+							<td>Riley Allen</td>
+							<td>riley.allen@mycompany.com</td>
+							<td>11/05/2018</td>
+						</tr>
+						<tr>
+							<td>Gabriel Hall</td>
+							<td>gabriel.hall@mycompany.com</td>
+							<td>07/30/2023</td>
+						</tr>
+						<tr>
+							<td>Mia Wright</td>
+							<td>mia.wright@mycompany.com</td>
+							<td>01/18/2025</td>
+						</tr>
+						<tr>
+							<td>Elijah Sanchez</td>
+							<td>elijah.sanchez@mycompany.com</td>
+							<td>05/11/2020</td>
+						</tr>
+						<tr>
+							<td>Isabella Thomas</td>
+							<td>isabella.thomas@mycompany.com</td>
+							<td>10/02/2022</td>
+						</tr>
+					</tbody>
+				</table>
+				<div style="border-top: 1px solid var(--primary-color); padding-top: 8px; width: 50%; float: left;">
+					<button type="button" class="inactive" style="margin-right: 8px;">◁ Previous</button>
+					Page 1 of 1
+				</div>
+				<div style="border-top: 1px solid var(--primary-color); padding-top: 8px; width: 50%; float: right; text-align: right;">
+					27 total
+					<button type="button" class="inactive" style="margin-left: 8px;">Next ▷</button>
+				</div>
+			</div>
+		</div>
+		<div style="float: left;"></div>
+		<div style="float: right;"></div>
+	</div>
+</body>
+</html>

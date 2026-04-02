@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Individual</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<script src="sort.js"></script>
+</head>
+<body>
+	<!-- LEFT NAVIGATION -->
+	<div class="nav-left">
+		<div onclick="window.location.href='index.html'"><img src="images/KosmosWorkforceLogoWhite.png" width="184px" height="auto"></div>
+		<div onclick="window.location.href='index.html'">
+			<svg xmlns="http://www.w3.org/2000/svg" 
+				width="24" height="24" viewBox="0 0 24 24" fill="none" 									stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+				aria-hidden="true">
+				<rect width="7" height="9" x="3" y="3" rx="1"></rect>
+				<rect width="7" height="5" x="14" y="3" rx="1"></rect>
+				<rect width="7" height="9" x="14" y="12" rx="1"></rect>
+				<rect width="7" height="5" x="3" y="16" rx="1"></rect>
+			</svg>&nbsp;
+			Dashboard
+		</div>	
+		<div onclick="window.location.href='team.html'">
+			<svg xmlns="http://www.w3.org/2000/svg" 
+				width="24" height="24" viewBox="0 0 24 24" fill="none" 
+				stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+				aria-hidden="true">
+				<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+				<path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+				<circle cx="9" cy="7" r="4"></circle>
+			</svg>&nbsp;
+			Employees
+		</div>
+		<div>
+			<svg xmlns="http://www.w3.org/2000/svg"
+				width="24" height="24" viewBox="0 0 24 24" fill="none"
+				stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+				aria-hidden="true">
+				<path d="m16 6 4 14"></path>
+				<path d="M12 6v14"></path>
+				<path d="M8 8v12"></path>
+				<path d="M4 4v16"></path>
+			</svg>&nbsp;
+			Assessment Library
+		</div>
+		<div>
+			<svg xmlns="http://www.w3.org/2000/svg" 
+				width="24" height="24" viewBox="0 0 24 24" fill="none" 
+				stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+				aria-hidden="true">
+				<rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
+				<path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+				<path d="M12 11h4"></path>
+				<path d="M12 16h4"></path>
+				<path d="M8 11h.01"></path><path d="M8 16h.01"></path>
+			</svg>&nbsp;
+			Assignments
+		</div>
+		<div>
+			<svg xmlns="http://www.w3.org/2000/svg" 
+				width="24" height="24" viewBox="0 0 24 24" fill="none" 
+				stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+				aria-hidden="true">
+				<path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+				<path d="M18 17V9"></path>
+				<path d="M13 17V5"></path>
+				<path d="M8 17v-3"></path>
+			</svg>&nbsp;
+			Results
+		</div>
+		<div style="position: absolute; bottom: 0; padding-top: 16px; border-top: 4px solid #ffffff50; width: 200px;">
+			<svg xmlns="http://www.w3.org/2000/svg"
+				width="24" height="24" viewBox="0 0 24 24" fill="none"
+				stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+				aria-hidden="true">
+				<path d="m16 17 5-5-5-5"></path><path d="M21 12H9"></path>
+				<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+			</svg>&nbsp;
+			Sign Out
+		</div>
+	</div><!-- END OF NAVIGATION PANE -->
+
+	<!-- Main Content Section -->
+	<div class="main">
+		<h2>Benjamin Lewis</h2>
+		<hr size="1" />
+		<div>
+			<div style="float: left;">
+				<button type="button" class="tab selected">Details</button>
+				<button type="button" class="tab">History</button>
+			</div>
+		</div>
+
+		<div class="card-container">
+			<div class="card" style="flex: 1">
+				<h3>Employee details</h3>
+				<div>
+					<div style="float:left;">
+						<p>Title: Analyst</p>
+						<p>Grade level: IC7</p>
+						<p>
+							Time in grade:
+							<span id="elapsed"></span>
+							<script>
+  								const start = new Date("09/08/2023"), el = document.getElementById("elapsed");
+  								(function up() {
+  									let now = new Date();
+									let y = now.getFullYear()-start.getFullYear();
+									let m = now.getMonth()-start.getMonth();
+									let d = now.getDate()-start.getDate();
+  									if (d < 0) m--, d += new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+  									if (m < 0) y--, m += 12;
+  									el.innerText = `${y} years, ${m} months, ${d} days`;
+  									setTimeout(up, 1000);
+  								})();
+							</script>
+						</p>
+						<p>Current position date: 09/08/2023</p>
+						<p>Hire date: 06/04/2022</p>
+						<p>Email address: benjamin.lewis@mycompany.com</p>
+					</div>
+					<div style="float:right;">
+						<img src="images/benjamin_lewis.png" style="height: 100px; width: auto;" />
+					</div>
+				</div>
+				<table id="myTable" style="margin-top: 16px;">
+					<thead>
+						<tr>
+							<th onclick="sortTable(0)">Metric</th>
+							<th onclick="sortTable(1)" colspan="2">Score</th>
+						</tr>
+					</thead>
+					<tbody>	
+						<tr>
+							<td>Career path documented</td>
+							<td>100%</td>
+							<td>
+								<svg width="108px" height="24" style="display: block; margin-top: -8px;">
+									<rect x="8" y="8" width="100" height="16" 
+										style="fill:none; stroke:var(--primary-color); stroke-width:1;" />
+									<rect x="8" y="8" width="0" height="16" 
+										style="fill:var(--primary-color); fill-opacity:0.75;">
+										<animate attributeName="width" from="0" to="100" begin="0s" dur="1s" fill="freeze"/>
+									</rect>
+								</svg>
+							</td>
+						</tr>	
+						<tr>
+							<td>Time in grade requirement</td>
+							<td>100%</td>
+							<td>
+								<svg width="108px" height="24" style="display: block; margin-top: -8px;">
+									<rect x="8" y="8" width="100" height="16" 
+										style="fill:none; stroke:var(--primary-color); stroke-width:1;" />
+									<rect x="8" y="8" width="0" height="16" 
+										style="fill:var(--primary-color); fill-opacity:0.75;">
+										<animate attributeName="width" from="0" to="100" begin="0s" dur="1s" fill="freeze"/>
+									</rect>
+								</svg>
+							</td>
+						</tr>	
+						<tr>
+							<td>Strengths documented</td>
+							<td>100%</td>
+							<td>
+								<svg width="108px" height="24" style="display: block; margin-top: -8px;">
+									<rect x="8" y="8" width="100" height="16" 
+										style="fill:none; stroke:var(--primary-color); stroke-width:1;" />
+									<rect x="8" y="8" width="0" height="16" 
+										style="fill:var(--primary-color); fill-opacity:0.75;">
+										<animate attributeName="width" from="0" to="100" begin="0s" dur="1s" fill="freeze"/>
+									</rect>
+								</svg>
+							</td>
+						</tr>	
+						<tr>
+							<td>Skills demonstrated</td>
+							<td>83%</td>
+							<td>
+								<svg width="108px" height="24" style="display: block; margin-top: -8px;">
+									<rect x="8" y="8" width="100" height="16" 
+										style="fill:none; stroke:var(--primary-color); stroke-width:1;" />
+									<rect x="8" y="8" width="0" height="16" 
+										style="fill:var(--primary-color); fill-opacity:0.75;">
+										<animate attributeName="width" from="0" to="83" begin="0s" dur="1s" fill="freeze"/>
+									</rect>
+								</svg>
+							</td>
+						</tr>	
+						<tr>
+							<td>Experience documented</td>
+							<td>78%</td>
+							<td>
+								<svg width="108px" height="24" style="display: block; margin-top: -8px;">
+									<rect x="8" y="8" width="100" height="16" 
+										style="fill:none; stroke:var(--primary-color); stroke-width:1;" />
+									<rect x="8" y="8" width="0" height="16" 
+										style="fill:var(--primary-color); fill-opacity:0.75;">
+										<animate attributeName="width" from="0" to="78" begin="0s" dur="1s" fill="freeze"/>
+									</rect>
+								</svg>
+							</td>
+						</tr>	
+						<tr>
+							<td>Target position identified</td>
+							<td>100%</td>
+							<td>
+								<svg width="108px" height="24" style="display: block; margin-top: -8px;">
+									<rect x="8" y="8" width="100" height="16" 
+										style="fill:none; stroke:var(--primary-color); stroke-width:1;" />
+									<rect x="8" y="8" width="0" height="16" 
+										style="fill:var(--primary-color); fill-opacity:0.75;">
+										<animate attributeName="width" from="0" to="100" begin="0s" dur="1s" fill="freeze"/>
+									</rect>
+								</svg>
+							</td>
+						</tr>	
+						<tr>
+							<td>Succession plan documented</td>
+							<td>80%</td>
+							<td>
+								<svg width="108px" height="24" style="display: block; margin-top: -8px;">
+									<rect x="8" y="8" width="100" height="16" 
+										style="fill:none; stroke:var(--primary-color); stroke-width:1;" />
+									<rect x="8" y="8" width="0" height="16" 
+										style="fill:var(--primary-color); fill-opacity:0.75;">
+										<animate attributeName="width" from="0" to="80" begin="0s" dur="1s" fill="freeze"/>
+									</rect>
+								</svg>
+							</td>
+						</tr>	
+						<tr>
+							<td>Responsibilities documented</td>
+							<td>74%</td>
+							<td>
+								<svg width="108px" height="24" style="display: block; margin-top: -8px;">
+									<rect x="8" y="8" width="100" height="16" 
+										style="fill:none; stroke:var(--primary-color); stroke-width:1;" />
+									<rect x="8" y="8" width="0" height="16" 
+										style="fill:var(--primary-color); fill-opacity:0.75;">
+										<animate attributeName="width" from="0" to="74" begin="0s" dur="1s" fill="freeze"/>
+									</rect>
+								</svg>
+							</td>
+						</tr>	
+						<tr>
+							<td>Mentors assigned</td>
+							<td>50%</td>
+							<td>
+								<svg width="108px" height="24" style="display: block; margin-top: -8px;">
+									<rect x="8" y="8" width="100" height="16" 
+										style="fill:none; stroke:var(--primary-color); stroke-width:1;" />
+									<rect x="8" y="8" width="0" height="16" 
+										style="fill:var(--primary-color); fill-opacity:0.75;">
+										<animate attributeName="width" from="0" to="50" begin="0s" dur="1s" fill="freeze"/>
+									</rect>
+								</svg>
+							</td>
+						</tr>	
+						<tr>
+							<td>Total Readiness</td>
+							<td>82%</td>
+							<td>
+								<svg width="108px" height="24" style="display: block; margin-top: -8px;">
+									<rect x="8" y="8" width="100" height="16" 
+										style="fill:none; stroke:var(--primary-color); stroke-width:1;" />
+									<rect x="8" y="8" width="0" height="16" 
+										style="fill:var(--primary-color); fill-opacity:0.75;">
+										<animate attributeName="width" from="0" to="82" begin="0s" dur="1s" fill="freeze"/>
+									</rect>
+								</svg>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div style="border-top: 1px solid var(--primary-color); padding-top: 8px; width: 50%; float: left;">
+					<button type="button" class="inactive" style="margin-right: 8px;">◁ Previous</button>
+					Page 1 of 1
+				</div>
+				<div style="border-top: 1px solid var(--primary-color); padding-top: 8px; width: 50%; float: right; text-align: right;">
+					10 total
+					<button type="button" class="inactive" style="margin-left: 8px;">Next ▷</button>
+				</div>
+			</div>
+		</div>
+		<div style="float: left;"></div>
+		<div style="float: right;"></div>
+	</div>
+</body>
+</html>

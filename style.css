@@ -1,0 +1,271 @@
+:root {
+	--primary-color: #052C66;
+	--primary-color-light: #052C6680;
+	--primary-color-muted: #052C6607;
+	--secondary-color: #570040;
+	--white-color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+body {
+	font-family: 'Verdana', 'Arial', sans-serif;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	color: var(--primary-color);
+	font-size: 16px;
+	box-sizing: border-box;
+        display: flex; /* Use Flexbox for the main layout */
+        min-height: 100vh; /* Ensure the layout takes the full viewport height */
+        font-family: sans-serif;
+}
+
+button {
+	border: none;
+	border-radius: 8px;
+	padding: 8px;
+	background-color: var(--primary-color);
+	color: var(--white-color);
+	font-size: 16px;
+	height: 32px;
+	min-height: 32px;
+}
+button:hover {
+	cursor: pointer;
+	box-shadow: 2px 2px 5px var(--primary-color-light);
+}
+
+h1 {
+	font-size: 48px;
+	font-weight: lighter;
+	text-align: center;
+	letter-spacing: 8px;
+}
+
+header {
+	padding: 80px;
+	background-color: var(--primary-color);
+	color: var(--white-color);
+	padding-left: 20vw;
+	padding-right: 20vw;
+	margin-bottom: 16px;
+}
+
+footer {
+	background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));	
+	padding: 8px;
+	color: var(--white-color);
+	display: flex;
+	align-items: center;
+}
+
+main {
+	padding-left: 20vw;
+	padding-right: 20vw;
+	min-height: calc(100vh - 288px);
+}
+
+nav {
+	background-color: var(--white-color);
+	padding: 8px;
+	color: var(--primary-color);
+	display: flex;
+	//align-items: center;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+table td {
+	min-height: 32px;
+	padding: 4px;
+}
+table th {
+	min-height: 32px;
+	padding: 4px;
+	text-align: left;
+	border-bottom: 2px solid var(--primary-color);
+	//background-color: var(--primary-color);
+	//color: var(--white-color);
+	
+}
+table tr:nth-child(even) {
+	background-color: var(--primary-color-muted);
+}
+table tr:nth-child(odd) {
+	background-color: var(--white-color);
+}
+
+.card {
+	border-radius: 16px;
+	padding: 0 16px 16px 16px;
+	margin-bottom: 16px;
+	box-shadow: 5px 5px 10px var(--primary-color-light);
+	background-color: var(--primary-color-muted);
+}
+.card:hover {
+	cursor: pointer;
+	box-shadow: 2px 2px 5px var(--primary-color-light);
+}
+.card>img {
+	height: 200px; 
+	width: auto; 
+	float: left; 
+	margin-right: 8px; 
+	opacity: 0.8;
+}
+
+.card-container {
+	clear: both;
+	display: flex;
+	flex-wrap: wrap; /* Allows items to wrap onto multiple lines. */
+	gap: 16px;
+}
+
+.centered {
+	clear: both;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+.inactive {
+	background-color: #00000050;
+}
+.inactive:hover {
+	box-shadow: none;
+	cursor: default;
+}
+
+.main {
+            flex-grow: 1; /* This makes the main section occupy the remaining width */
+            padding: 8px;
+            background-color: var(--white-color); /* White background */
+	margin-left: 216px;
+	overflow-y: auto; 
+            /* Optional: for the main content to scroll independently if 'position: fixed' is used on the nav */
+        }
+
+.nav-left {
+	width: 200px;
+	min-width: 200px;
+	background-color: var(--primary-color);
+	color: var(--white-color);
+	padding: 8px;
+	position: fixed; height: 100vh;
+	/* Optional: for a truly fixed nav that doesn't scroll with content */
+}
+.nav-left>div {
+	display: flex;
+	align-items: center;
+	margin-bottom: 16px;
+}
+.nav-left>div:hover {
+	background-color: #ffffff25;
+	cursor: pointer;
+}
+
+.tab {	border: none;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	padding: 8px;
+	color: var(--white-color);
+	height: 32px;
+	min-height: 32px;
+	background-color: #00000050;
+}
+.tab:hover {
+	box-shadow: none;
+}
+.tab.selected {
+	background-color: var(--primary-color);
+}
+	
+#quote-container {
+	text-align: center;
+	color: var(--primary-color-light);
+	font-size: 24px;
+	margin-top: 48px;
+	margin-bottom: 96px;
+	min-height: 96px;
+}
+
+#quote-container::before {
+	content: open-quote "Their success is proof that when we invest in talent here at home, we build both opportunity and resilience for our city\'s future." close-quote " -Lynn McBee, Workfoce Czar for the City of Dallas";
+	opacity: 0;
+	animation: quote-replace 21s ease-in-out 0s infinite forwards, quote-fade 7s ease-in-out 0s infinite forwards;
+}
+
+@keyframes quote-replace {
+	0%, 33.33% {
+		content: open-quote "Their success is proof that when we invest in talent here at home, we build both opportunity and resilience for our city\'s future." close-quote " -Lynn McBee, Workfoce Czar for the City of Dallas";
+	}
+  	33.34%, 66.66% {
+		content: open-quote "When mindset and mentorship align, the switch flips and growth becomes inevitable" close-quote " -Sushma Krishnamurthy, CEO, InzpireU";
+	}
+  	66.67%, 100% {
+		content: open-quote "It\'s encouraging us to promote personal commitments to self-development as part of our career path." close-quote " -Roseanna Ohiagu, Scholarship Recipient";
+	}
+}
+@keyframes quote-fade {
+	10%, 90% {
+		opacity: 1;
+  	}
+	0%, 100% {
+		opacity: 0;
+	}
+  }
+}
+
+
+
+
+/* Gauges */
+  svg#gauge {
+    display: block;
+    filter: drop-shadow(0 8px 16px rgba(0,0,0,0.4));
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  input[type=range] {
+    -webkit-appearance: none;
+    width: 300px;
+    height: 4px;
+    background: #1e2530;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #e0e6f0;
+    border: 3px solid #0d0f14;
+    box-shadow: 0 0 0 1px #5a6a80;
+    cursor: pointer;
+    transition: transform 0.15s;
+  }
+  input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.2); }
+
+  .tick-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    font-size: 11px;
+    color: #3a4a60;
+  }

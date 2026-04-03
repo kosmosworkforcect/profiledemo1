@@ -190,13 +190,18 @@ table tr:nth-child(odd) {
 	background-color: #ffffff25;
 	cursor: pointer;
 }
+@media (max-width: 599px) {
+	.nav-left>div:has(img) {
+		display: none;
+	}
+}
 
 .nav-toggle {					/* Toggle button */
 	position: fixed;
 	z-index: 1100;
 	cursor: pointer;
 	display: none;				/* hidden by default */
-	padding: 2px 4px;
+	padding: 0 4px 2px 4px;
 	border: 2px solid var(--primary-color);
 	border-radius: 8px;
 	background-color: var(--white-color);

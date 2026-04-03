@@ -28,7 +28,7 @@ function makeGauge(container, label, val = 50) {
         <g class="ticks"></g>
         <text class="val" x="180" y="258" text-anchor="middle" font-size="56" fill="#1a2030">0</text>
         <text x="180" y="284" text-anchor="middle" font-size="11" font-weight="500" letter-spacing="3" fill="#aab4c4">${label}</text>
-        <line class="needle" stroke="#1a2030" stroke-width="3" stroke-linecap="round"/>
+        <line class="needle" stroke="#1a2030" stroke-width="4" stroke-linecap="round"/>
         <polygon class="tip" fill="#1a2030"/>
         <circle cx="180" cy="180" r="11" fill="#1a2030"/>
         <circle cx="180" cy="180" r="5" fill="#ffffff"/>
@@ -78,7 +78,7 @@ function makeGauge(container, label, val = 50) {
       tx.setAttribute('text-anchor', 'middle');
       tx.setAttribute('dominant-baseline', 'middle');
       tx.setAttribute('fill', '#8898aa');
-      tx.setAttribute('font-size', '10');
+      tx.setAttribute('font-size', '16');
       tx.textContent = v;
       ticks.appendChild(tx);
     }
@@ -108,7 +108,7 @@ function makeGauge(container, label, val = 50) {
   const animateTo = target => {
     let valNow = 0;
     const start = performance.now();
-    const duration = 1000; // 1 second
+    const duration = 1250; // 1.25 seconds
     function step(t) {
       const progress = Math.min((t - start) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic

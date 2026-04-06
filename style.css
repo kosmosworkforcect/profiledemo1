@@ -215,6 +215,18 @@ table tr:nth-child(odd) {
 		display: none;			/* Hide logo on small screen with menu toggled on */
 	}
 }
+.nav-left>div:last-child {
+	position: absolute; 
+	bottom: 0; 
+	padding: 16px 0; 
+	border-top: 4px solid #ffffff50; 
+	width: 200px;
+}
+@media (max-width: 599px) {
+	.nav-left>div:last-child {
+		margin-bottom: 40px;
+	}
+}
 
 .nav-toggle {					/* Toggle button */
 	position: fixed;

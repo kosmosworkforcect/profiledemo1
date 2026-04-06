@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const chevron = document.createElement("span");
     chevron.className = "chevron";
     chevron.style.cssText =
-      "display:inline-block;width:1em;margin-left:0.3em;font-size:0.8em;opacity:0.5;";
-    chevron.textContent = "◇"; // straight line when not sorted
+      "display:inline-block; width:1em; height: 1em; margin-left:0.3em; transform: scale(0.75, 1.25); opacity:0.5;";
+    chevron.textContent = "◇"; // show when not sorted
     th.appendChild(chevron);
   });
 });
@@ -61,11 +61,9 @@ function sortTable(colIndex) {
   document.querySelectorAll("#myTable thead .chevron").forEach((chev, i) => {
     if (i === colIndex) {
       chev.textContent = direction === 1 ? "▲" : "▼";
-      chev.style.opacity = 1;
       sortedColumn = colIndex;
     } else {
       chev.textContent = "◇";
-      chev.style.opacity = 0.5;
     }
   });
 

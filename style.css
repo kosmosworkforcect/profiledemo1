@@ -193,22 +193,22 @@ table tr:nth-child(odd) {
 }
 @media (min-width: 600px) {
 	.nav-left {
-		transform: translateX(0);		/* Nav always visible */
+		transform: translateX(0);	/* Nav always visible */
   	}
 }
 
 .nav-left>div {
 	display: flex;
 	align-items: center;
-	margin-bottom: 16px;
+	padding: 4px;
+	margin: -4px -8px 12px -4px;">
 }
 .nav-left>div:hover {
 	background-color: #ffffff25;
 	cursor: pointer;
-	padding: 4px;
-	margin: -4px -8px 12px -4px;">
+
 }
-.nav-left>div:has(img):hover {
+.nav-left>div:has(img):hover {			/* Don't highlight logo on hover */
 	background-color: unset;
 }
 @media (max-width: 599px) {
@@ -216,11 +216,11 @@ table tr:nth-child(odd) {
 		display: none;			/* Hide logo on small screen with menu toggled on */
 	}
 }
-.nav-left>div:last-child {
+.nav-left>div:last-child {			/* Log out */
 	position: absolute; 
-	bottom: 0; 
-	padding: 16px 0; 
-	border-top: 4px solid #ffffff50; 
+	bottom: 16px; 
+	border-top: 4px solid #ffffff50;
+	padding-top: 4px;
 	width: 200px;
 }
 @media (max-width: 599px) {

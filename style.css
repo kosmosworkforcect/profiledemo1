@@ -11,6 +11,9 @@ a {
 	text-decoration: none;
 	color: unset;
 }
+p>a {
+	font-weight: bold;
+}
 
 body {
 	font-family: 'Verdana', 'Arial', sans-serif;

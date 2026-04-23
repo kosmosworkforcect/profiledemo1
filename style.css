@@ -139,6 +139,13 @@ table tr:nth-child(odd) {
 	margin-bottom: 16px;
 }
 
+.current {
+	font-weight: bold; 
+	background-color: #ffffff50; 
+	padding: 4px; 
+	margin: -4px -8px 12px -4px;
+}
+
 .inactive {
 	background-color: #00000050;
 }
@@ -230,6 +237,11 @@ table tr:nth-child(odd) {
 	.nav-left>div:last-child {
 		margin-bottom: 40px;
 	}
+}
+
+.nav-left svg {
+	margin-right: 8px;
+	min-width: 24px;
 }
 
 .nav-toggle {					/* Toggle button */

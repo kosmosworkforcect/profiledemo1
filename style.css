@@ -282,8 +282,8 @@ table tr:nth-child(odd) {
 	border-bottom-right-radius: 0;
 	padding: 8px;
 	color: var(--white-color);
-	height: 32px;
-	min-height: 32px;
+	height: 40px;
+	min-height: 40px;
 	background-color: #00000050;
 }
 .tab:hover {

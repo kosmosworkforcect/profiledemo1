@@ -159,7 +159,6 @@ table tr:nth-child(odd) {
 	overflow-y: auto;		/* Main scrolls */
 	padding: 8px;			/* Only internal padding */
 	transition: margin-left 0.3s ease;
-	width: 100%;
 }
 @media (max-width: 599px) {
 	#nav-toggle:checked ~ .nav-left ~ .main,
@@ -168,11 +167,14 @@ table tr:nth-child(odd) {
 	}
 	.main {
 		margin-left: 0;
+		min-width: 100vw;
 	}
 }
 @media (min-width: 600px) {
 	.main  {
 		margin-left:  216px; 	 /* Main always shifted to 216px */
+		width: calc(100vw - 256px);
+		min-width: calc(100vw - 256px);
 	}
 }
 

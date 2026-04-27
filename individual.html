@@ -25,7 +25,7 @@
 		</div>
 
 		<div class="card-container">
-			<div class="card" style="flex: 1">
+			<div class="card" style="flex: 1; min-width: calc(100% - 32px);">
 				<h3>Employee details</h3>
 				<div>
 					<div style="float:left;">
@@ -214,10 +214,98 @@
 					10 total
 					<button type="button" class="inactive" style="margin-left: 8px;">Next ▷</button>
 				</div>
-			</div>
-		</div>
-		<div style="float: left;"></div>
-		<div style="float: right;"></div>
-	</div>
+			</div><!-- END OF FIRST CARD -->
+
+			<div class="card" style="flex: 1; min-width: calc(100% - 32px);"><!-- SECOND CARD -->
+				<h3>Career Path</h3>
+				<svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet"
+					style="width: calc(100% - 96px);
+					height: auto; margin-top: -200px; 
+					-webkit-text-stroke: 1px white;
+					text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+					font-size: 8px;">
+		
+					<!-- Path 1 -->
+					<path d="M 30 300 
+						Q 100 250, 170 230 
+						Q 240 210, 310 250 
+						Q 380 230, 450 190 
+						Q 520 170, 590 210 
+						Q 660 190, 730 170 
+						Q 770 165, 790 180" 
+						fill="none" 
+						stroke="var(--secondary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10,5" />
+					<circle cx="100" cy="257" r="5" fill="var(--green-color)" />
+					<text x="80" y="252">Document requirements</text>
+					<circle cx="240" cy="225" r="5" fill="var(--amber-color)" />
+					<text x="220" y="220">Demonstrate skills</text>
+					<circle cx="380" cy="225" r="5" fill="var(--amber-color)" />
+					<text x="360" y="220">Document experience</text>
+					<circle cx="520" cy="185" r="5" fill="var(--red-color)" />
+					<text x="500" y="180">Identify mentor(s)</text>
+					<circle cx="660" cy="190" r="5" fill="var(--red-color)" />
+					<text x="640" y="185">Supervisor validation</text>
+					<circle cx="790" cy="180" r="8" fill="var(--secondary-color)" />
+					<circle cx="790" cy="180" r="4" fill="var(--white-color)"/>
+					<text x="735" y="175" font-weight="bold">Senior Analyst</text>
+		  
+					<!-- Path 2: -->
+					<path d="M 30 300 
+						Q 95 280, 155 260 
+						Q 215 240, 275 280 
+						Q 335 340, 395 300 
+						Q 455 260, 515 300 
+						Q 575 340, 635 300 
+						Q 695 270, 755 290 
+						Q 775 295, 790 300" 
+						fill="none" 
+						stroke="var(--grey-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10,5" />
+					<circle cx="120" cy="272" r="5" fill="var(--green-color)" />
+					<text x="100" y="267">Document requirements</text>
+					<circle cx="260" cy="270" r="5" fill="var(--amber-color)" />
+					<text x="240" y="265">Demonstrate Skills</text>
+					<circle cx="400" cy="297" r="5" fill="var(--red-color)" />
+					<text x="380" y="292">Document experience</text>
+					<circle cx="540" cy="313" r="5" fill="var(--red-color)" />
+					<text x="520" y="308">Identify mentor(s)</text>
+					<circle cx="680" cy="285" r="5" fill="var(--red-color)" />
+					<text x="660" y="280">Supervisor validation</text>
+					<circle cx="790" cy="300" r="8" fill="var(--grey-color)"/>
+					<circle cx="790" cy="300" r="4" fill="var(--white-color)"/>
+					<text x="715" y="295" font-weight="bold">Software Engineer</text>
+	  
+					<!-- Path 3: -->
+					<path d="M 30 300 
+						Q 85 335, 145 365 
+						Q 205 385, 265 375 
+						Q 325 395, 385 455 
+						Q 445 485, 505 475 
+						Q 565 495, 625 475 
+						Q 685 465, 745 445 
+						Q 775 430, 790 420" 
+						fill="none" 
+						stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10,5" />
+					<circle cx="100" cy="342" r="5" fill="var(--green-color)" />
+					<text x="80" y="337">Document requirements</text>
+					<circle cx="240" cy="378" r="5" fill="var(--red-color)" />
+					<text x="220" y="373">Demonstrate skills</text>
+					<circle cx="380" cy="450" r="5" fill="var(--red-color)" />
+					<text x="360" y="445">Document experience</text>
+					<circle cx="520" cy="480" r="5" fill="var(--red-color)" />
+					<text x="500" y="475">Identify mentor(s)</text>
+					<circle cx="660" cy="468" r="5" fill="var(--red-color)" />
+					<text x="640" y="463">Supervisor validation</text>
+					<circle cx="790" cy="420" r="8" fill="var(--primary-color)"/>
+					<circle cx="790" cy="420" r="4" fill="var(--white-color)"/>
+	 				<text x="739" y="415" font-weight="bold">Graphic artist</text>
+		
+					<!-- Single starting point -->
+					<circle cx="30" cy="300" r="8" fill="#2c3e50"/>
+					<circle cx="30" cy="300" r="4" fill="#ecf0f1"/>
+					<text x="22" y="295" font-weight="bold">Analyst</text>
+				</svg>
+			</div><!-- END OF SECOND CARD -->
+		</div><!-- END OF CARD CONTAINER -->
+	</div><!-- END OF MAIN SECTION -->
 </body>
 </html>

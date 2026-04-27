@@ -164,7 +164,7 @@ table tr:nth-child(odd) {
 	padding: 8px;			/* Only internal padding */
 	transition: margin-left 0.3s ease;
 }
-@media (max-width: 599px) {
+@media (max-width: 799px) {
 	#nav-toggle:checked ~ .nav-left ~ .main,
 	#nav-toggle:checked ~ .main {
 		margin-left: 216px; 	/* Main shifts right only when nav is visible */
@@ -176,7 +176,7 @@ table tr:nth-child(odd) {
 
 	}
 }
-@media (min-width: 600px) {
+@media (min-width: 800px) {
 	.main  {
 		margin-left:  216px; 	 /* Main always shifted to 216px */
 		width: calc(100vw - 256px);
@@ -200,7 +200,7 @@ table tr:nth-child(odd) {
 	transition: transform 0.3s ease;
 	float: left;
 }
-@media (max-width: 599px) {
+@media (max-width: 799px) {
 	.nav-left {
 		transform: translateX(-100%);	/* Nav hidden by default */
 		margin-top: 32px;		/* Make room for hamburger menu button */
@@ -209,7 +209,7 @@ table tr:nth-child(odd) {
 		transform: translateX(0);
 	}
 }
-@media (min-width: 600px) {
+@media (min-width: 800px) {
 	.nav-left {
 		transform: translateX(0);	/* Nav always visible */
   	}
@@ -229,7 +229,7 @@ table tr:nth-child(odd) {
 .nav-left>div:has(img):hover {			/* Don't highlight logo on hover */
 	background-color: unset;
 }
-@media (max-width: 599px) {
+@media (max-width: 799px) {
 	.nav-left>div:has(img) {
 		display: none;			/* Hide logo on small screen with menu toggled on */
 	}
@@ -241,7 +241,7 @@ table tr:nth-child(odd) {
 	padding-top: 4px;
 	width: 200px;
 }
-@media (max-width: 599px) {
+@media (max-width: 799px) {
 	.nav-left>div:last-child {
 		margin-bottom: 40px;
 	}
@@ -268,13 +268,13 @@ table tr:nth-child(odd) {
 	max-width: 16px;
 	text-align: center;
 }
-@media (max-width: 599px) {
+@media (max-width: 799px) {
 	.nav-toggle {
 		display: block;			/* Show toggle */
 	}
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
 	.nav-toggle {
 		display: none;			/* Toggle hidden */
 	}

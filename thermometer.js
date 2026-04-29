@@ -14,8 +14,8 @@ function getAnimatedThermometerSVG(endDegrees, heightPx) {
   const hEnd = degToY(endDegrees) - y0; // height at endDegrees
 
   // Fill color logic
-  const fillColor = endDegrees >= 40 ? "var(--red-color)"
-                   : endDegrees >= 20 ? "var(--amber-color)"
+  const fillColor = endDegrees >= 67 ? "var(--red-color)"
+                   : endDegrees >= 33 ? "var(--amber-color)"
                    : "var(--green-color)";
 
   // ViewBox and sizing

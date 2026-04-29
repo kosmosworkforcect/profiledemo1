@@ -10,6 +10,7 @@
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<script src="nav.js"></script>
 	<script src="gauge.js"></script>
+	<script src="thermometer.js"></script>
 </head>
 <body>
 	<left-nav />
@@ -53,6 +54,12 @@
 			<div class="card" id="gauge9" style="width: 200px; text-align: center;">
 				<h4>Bias to Action</h4>
 				<script>makeGauge(document.getElementById('gauge9'), 'HEALTH SCORE', 82);</script>
+			</div>
+			<div class="card" style="width: 200px; text-align: center;">
+				<h4>Burnout Level</h4>
+
+				<script>getAnimatedThermometerSVG(27, 168);</script>
+
 			</div>
 			<div class="card" style="width: 452px;" onclick="window.location.href='team.html'">
 				<h4> My Team</h4>

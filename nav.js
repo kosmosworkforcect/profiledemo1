@@ -7,10 +7,11 @@ class Navmenu extends HTMLElement {
 
 	<!-- LEFT NAVIGATION -->
 	<div class="nav-left">
-		<div onclick="window.location.href='index.html'"><img src="images/KosmosWorkforceLogoWhite.png" width="184px" height="auto"></div>
-		<div data-link="index.html" onclick="window.location.href='index.html'">
+		<div onclick="window.location.href='individual.html'"><img src="images/KosmosWorkforceLogoWhite.png" width="184px" height="auto"></div>
+		<div data-link="index.html" onclick="window.location.href='individual.html'">
 			<svg xmlns="http://www.w3.org/2000/svg" 
-				width="24" height="24" viewBox="0 0 24 24" fill="none" 														stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+				width="24" height="24" viewBox="0 0 24 24" fill="none"
+				stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
 				aria-hidden="true">
 				<rect width="7" height="9" x="3" y="3" rx="1"></rect>
 				<rect width="7" height="5" x="14" y="3" rx="1"></rect>
@@ -18,26 +19,14 @@ class Navmenu extends HTMLElement {
 				<rect width="7" height="5" x="3" y="16" rx="1"></rect>
 			</svg>Dashboard
 		</div>	
-		<div data-link="team.html" onclick="window.location.href='team.html'">
+		<div data-link="individual.html" onclick="window.location.href='individual.html'">
 			<svg xmlns="http://www.w3.org/2000/svg" 
 				width="24" height="24" viewBox="0 0 24 24" fill="none" 
 				stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
 				aria-hidden="true">
 				<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-				<path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
 				<circle cx="9" cy="7" r="4"></circle>
-			</svg>Employees
-		</div>
-		<div data-link="assessments.html" onclick="window.location.href='assessments.html'">
-			<svg xmlns="http://www.w3.org/2000/svg"
-				width="24" height="24" viewBox="0 0 24 24" fill="none"
-				stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-				aria-hidden="true">
-				<path d="m16 6 4 14"></path>
-				<path d="M12 6v14"></path>
-				<path d="M8 8v12"></path>
-				<path d="M4 4v16"></path>
-			</svg>Assessment Library
+			</svg>Profile
 		</div>
 		<div onclick="alert('This page doesn\\'t exist yet!')">
 			<svg xmlns="http://www.w3.org/2000/svg" 

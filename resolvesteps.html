@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>Senior Analyst</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<script src="nav.js"></script>
+</head>
+<body>
+	<left-nav />
+	<!-- Main Content Section -->
+	<div class="main">
+		<h2>Senior Analyst</h2>
+		<hr size="1" />
+		<div class="card-container">
+			<div class="card" style="flex: 1; min-width: calc(100% - 32px);"><!-- CARD -->
+				<h3>Documenting skills</h3>
+
+				<div class="step">
+					<p class="type-me">Now that you have successfully identified the requirements for a senior analyst,
+						let's break down what you will need to demonstrate in order to be considered for that position.
+						You will also want to review your results with someone who hires senior analysts,
+						to validate your understanding and eliminate any ambiguity in how requirements are measured.
+					</p>
+					<br />&nbsp;<br /><a onclick="revealNext(this)">(Continue)</a>	
+				</div>
+				<div class="step" style="display: none;">
+					<p class="type-me">
+						The first requirement you listed is to have been in an analyst position for at least one year.
+						Since you have been an analyst since September 8, 2023, you easily meet this requirement.
+					</p>
+					<label for="jr1">Time in grade requirement</label>
+					<input type="checkbox" checked id="jr1" name="jr1"></input>
+					<br />&nbsp;<br /><a onclick="revealNext(this)">(Continue)</a>
+				</div>
+
+				<div class="step" style="display:none">
+  					<p class="type-me">
+						The next requirement you listed is to demonstrate advanced proficiency in Microsoft Office products.
+						You clarified that this refers to understanding the basic functionality in Word, Excel, and Outlook,
+						as well as the ability to manage settings and configure add-ins.
+						Have you had someone who supervises senior analysts validate your demonstrated proficiency?
+					</p>
+					<label for="jr2a">Yes</label>
+					<input type="radio" id="yes" name="jr2"></input>
+					<label for="jr2b">No</label>
+					<input type="radio" id="yes" name="jr2"></input>
+					<br />&nbsp;<br /><a onclick="revealNext(this)">(Continue)</a>
+				</div>
+
+				<div class="step" style="display:none">
+  					<p class="type-me">
+						The third requirement was to demonstrate professional communication style.
+						The most reliable way to validate this is to ask for direct feedback from your current supervisor 
+						or others in senior roles who you regularly interact with.
+						Have you gotten a solid &quot;Yes&quot; on that request?
+					</p>
+					<label for="jr3a">Yes</label>
+					<input type="radio" id="yes" name="jr3"></input>
+					<label for="jr3b">No</label>
+					<input type="radio" id="yes" name="jr3"></input>
+					<br />&nbsp;<br />
+					<a onclick="revealNext(this)">(Continue)</a>
+				</div>
+
+				<div class="step" style="display:none">
+  					<p class="type-me">
+						The fourth requirement was establishing a history of proactive project ownership and problem solving.
+						In addition to successfully executing tasks that are assigned to you, 
+						this involves idenitifying opportunities, defining project scopes, and driving solutions without supervision.
+						For example, identifying an inefficiency in the client onboarding process,
+						and initiating a data audit to propose improvements.
+						Would your supervisor agree that you have demonstrated this on at least 3 occasions?</p>
+					<label for="jr4a">Yes</label>
+					<input type="radio" id="yes" name="jr4"></input><br />
+					<label for="jr4b">No</label>
+					<input type="radio" id="yes" name="jr4"></input><br />
+					<br />&nbsp;<br />
+					<a onclick="revealNext(this)">(Continue)</a>
+				</div>
+
+				<div class="step" style="display:none">
+  					<p class="type-me">
+
+						The fifth and final requirement was acting as a subject matter expert (SME) 
+						who trains, mentors, or guides junior analysts on best practices, code quality, and business logic.
+						Examples include documenting processes for new hires, or leading a cross-functional project team.
+						What examples can you list for how you believe you have met this requirement?</p>
+					<textarea id="jr5" name="jr5" rows="6" cols="50"></textarea><br />
+				</div>
+				</form>
+			</div><!-- END OF CARD -->
+
+		</div><!-- END OF CARD CONTAINER -->
+	</div><!-- END OF MAIN SECTION -->
+
+<script>
+function typeEffect(el) {
+  const text = el.innerText;
+  el.innerText = '';
+  el.style.display = 'block'; // Make sure the text is visible
+  let i = 0;
+
+  (function type() {
+    if (i < text.length) {
+      el.innerHTML += text.charAt(i++);
+      setTimeout(type, 8); // Adjust speed here
+    }
+  })();
+}
+
+function revealNext(btn) {
+  const currentStep = btn.parentElement;
+  const nextStep = currentStep.nextElementSibling;
+
+  if (nextStep) {
+    btn.style.display = 'none';      // Hide current button
+    nextStep.style.display = 'block'; // Show next container
+    typeEffect(nextStep.querySelector('.type-me'));
+  }
+}
+
+// Start the very first paragraph on load
+window.onload = () => typeEffect(document.querySelector('.type-me'));
+</script>
+
+
+</body>
+</html>

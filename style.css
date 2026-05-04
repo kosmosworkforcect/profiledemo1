@@ -79,12 +79,9 @@ table td {
 	padding: 4px;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	min-width: 52px;
 }
-@media (max-width: 512px) {
-	table td {
-		max-width: 50px;
-	}
-}
+
 table th {
 	min-height: 32px;
 	padding: 4px;

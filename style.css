@@ -70,9 +70,10 @@ footer {
 
 table {
 	width: 100%;
-	max-width: calc(100% - 16px);
+	max-width: 100%;
 	border-collapse: collapse;
 }
+
 table td {
 	min-height: 32px;
 	padding: 4px;

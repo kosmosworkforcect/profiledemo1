@@ -70,7 +70,7 @@ footer {
 
 table {
 	width: 100%;
-	max-width: 100%;
+	max-width: calc(100% - 8px);
 	border-collapse: collapse;
 }
 

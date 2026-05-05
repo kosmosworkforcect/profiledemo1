@@ -50,8 +50,7 @@
 						The first requirement you listed is to have been in an analyst position for at least one year.
 						Since you have been an analyst since September 8, 2023, you easily meet this requirement.
 					</p>
-					<label for="jr1">Time in grade requirement</label>
-					<input type="checkbox" checked id="jr1" name="jr1"></input>
+					<input type="checkbox" checked id="jr1" name="jr1" /><label for="jr1">Time in grade requirement</label>
 					<br />&nbsp;<br /><a onclick="revealNext(this)">(Click to continue)</a>
 				</div><!-- END OF FIRST REQUIREMENT -->
 				<div class="step" style="display:none"><!-- SECOND REQUIREMENT -->
@@ -61,10 +60,8 @@
 						as well as the ability to manage settings and configure add-ins.
 						Have you had someone who supervises senior analysts validate your demonstrated proficiency?
 					</p>
-					<label for="jr2a">Yes</label>
-					<input type="radio" id="yes" name="jr2"></input>
-					<label for="jr2b">No</label>
-					<input type="radio" id="yes" name="jr2"></input>
+					<input type="radio" id="jr2a" name="jr2" /><label for="jr2a">Yes</label>					
+					<input type="radio" id="jr2b" name="jr2" /><label for="jr2b">No</label>
 					<br />&nbsp;<br /><a onclick="revealNext(this)">(Click to continue)</a>
 				</div><!-- END OF SECOND REQUIREMENT -->
 				<div class="step" style="display:none;"><!-- THIRD REQUIREMENT -->
@@ -74,14 +71,12 @@
 						or others in senior roles who you regularly interact with.
 						Have you gotten a solid &quot;Yes&quot; on that request?
 					</p>
-					<label for="jr3a">Yes</label>
-					<input type="radio" id="yes" name="jr3"></input>
-					<label for="jr3b">No</label>
-					<input type="radio" id="yes" name="jr3"></input>
+					<input type="radio" id="jr3a" name="jr3" /><label for="jr3a">Yes</label>
+					<input type="radio" id="jr3b" name="jr3" /><label for="jr3b">No</label>
 					<br />&nbsp;<br />
 					<a onclick="revealNext(this)">(Click to continue)</a>
 				</div><!-- END OF THIRD REQUIREMENT -->
-				<div class="step" style="display:none">
+				<div class="step" style="display:none"><!-- FOURTH REQUIREMENT -->
   					<p class="type-me">
 						The fourth requirement was establishing a history of proactive project ownership and problem solving.
 						In addition to successfully executing tasks that are assigned to you, 
@@ -89,53 +84,49 @@
 						For example, identifying an inefficiency in the client onboarding process,
 						and initiating a data audit to propose improvements.
 						Would your supervisor agree that you have demonstrated this on at least 3 occasions?</p>
-					<label for="jr4a">Yes</label>
-					<input type="radio" id="yes" name="jr4"></input>
-					<label for="jr4b">No</label>
-					<input type="radio" id="yes" name="jr4"></input>
+					<input type="radio" id="jr4a" name="jr4" /><label for="jr4a">Yes</label>
+					<input type="radio" id="jr4b" name="jr4" /><label for="jr4b">No</label>
 					<br />&nbsp;<br />
 					<a onclick="revealNext(this)">(Click to continue)</a>
-				</div>
-				<div class="step" style="display:none">
+				</div><!-- END OF FOURTH REQUIREMENT -->
+				<div class="step" style="display:none"><!-- FIFTH REQUIREMENT -->
   					<p class="type-me">
 						The fifth and final requirement was acting as a subject matter expert (SME) 
 						who trains, mentors, or guides junior analysts on best practices, code quality, and business logic.
 						Examples include documenting processes for new hires, or leading a cross-functional project team.
 						What examples can you list for how you believe you have met this requirement?</p>
 					<textarea id="jr5" name="jr5" rows="6" cols="50"></textarea><br />
-				</div>
-				</form>
-
+				</div><!-- END OF FIFTH REQUIREMENT -->
 	</div><!-- END OF MAIN SECTION -->
 
 <script>
-function typeEffect(el) {
-  const text = el.innerText;
-  el.innerText = '';
-  el.style.display = 'block'; // Make sure the text is visible
-  let i = 0;
+	function typeEffect(el) {
+		const text = el.innerText;
+		el.innerText = '';
+		el.style.display = 'block'; // Make sure the text is visible
+		let i = 0;
 
-  (function type() {
-    if (i < text.length) {
-      el.innerHTML += text.charAt(i++);
-      setTimeout(type, 4); // Adjust speed here
-    }
-  })();
-}
+	(function type() {
+		if (i < text.length) {
+			el.innerHTML += text.charAt(i++);
+			setTimeout(type, 4); // Adjust speed here
+			}
+		})();
+	}
 
-function revealNext(btn) {
-  const currentStep = btn.parentElement;
-  const nextStep = currentStep.nextElementSibling;
+	function revealNext(btn) {
+		const currentStep = btn.parentElement;
+		const nextStep = currentStep.nextElementSibling;
 
-  if (nextStep) {
-    btn.style.display = 'none';      // Hide current button
-    nextStep.style.display = 'block'; // Show next container
-    typeEffect(nextStep.querySelector('.type-me'));
-  }
-}
+		if (nextStep) {
+			btn.style.display = 'none';      // Hide current button
+			nextStep.style.display = 'block'; // Show next container
+			typeEffect(nextStep.querySelector('.type-me'));
+		}
+	}
 
-// Start the very first paragraph on load
-window.onload = () => typeEffect(document.querySelector('.type-me'));
+	// Start the very first paragraph on load
+	window.onload = () => typeEffect(document.querySelector('.type-me'));
 </script>
 
 

@@ -19,15 +19,15 @@
 		<h2>Dashboard</h2>
 		<hr size="1" />
 		<div class="card-container">
-			<div class="card" id="gauge1" style="width: 200px; text-align: center;" onclick="window.location.href='purpose.html'">
+			<div class="card" id="gauge1" style="width: 200px; text-align: center;" onclick="document.getElementById('underconstruction').showModal()">
 				<h4>Purpose Alignment</h4>
 				<script>makeGauge(document.getElementById('gauge1'), 'HEALTH SCORE', 86);</script>
 			</div>
-			<div class="card" id="gauge2" style="width: 200px; text-align: center;" onclick="window.location.href='strengths.html'">
+			<div class="card" id="gauge2" style="width: 200px; text-align: center;" onclick="alert('That page has not been created yet')">
 				<h4>Leveraging Strengths</h4>
 				<script>makeGauge(document.getElementById('gauge2'), 'HEALTH SCORE', 79);</script>
 			</div>
-			<div class="card" id="gauge3" style="width: 200px; text-align: center;">
+			<div class="card" id="gauge3" style="width: 200px; text-align: center;" onclick="window.location.href='inividual.html'">
 				<h4>Career Path Visibility</h4>
 				<script>makeGauge(document.getElementById('gauge3'), 'HEALTH SCORE', 93);</script>
 			</div>

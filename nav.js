@@ -28,7 +28,7 @@ class Navmenu extends HTMLElement {
 				<circle cx="9" cy="7" r="4"></circle>
 			</svg>Profile
 		</div>
-		<div onclick="alert('This page doesn\\'t exist yet!')">
+		<div onclick="document.getElementById('underconstruction').showModal()">
 			<svg xmlns="http://www.w3.org/2000/svg" 
 				width="24" height="24" viewBox="0 0 24 24" fill="none" 
 				stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -40,7 +40,7 @@ class Navmenu extends HTMLElement {
 				<path d="M8 11h.01"></path><path d="M8 16h.01"></path>
 			</svg>Assignments
 		</div>
-		<div onclick="alert('This page doesn\\'t exist yet!')">
+		<div onclick="document.getElementById('underconstruction').showModal()">
 			<svg xmlns="http://www.w3.org/2000/svg" 
 				width="24" height="24" viewBox="0 0 24 24" fill="none" 
 				stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
@@ -51,7 +51,7 @@ class Navmenu extends HTMLElement {
 				<path d="M8 17v-3"></path>
 			</svg>Results
 		</div>
-		<div onclick="alert('This page doesn\\'t exist yet!')">
+		<div onclick="document.getElementById('underconstruction').showModal()">
 			<svg xmlns="http://www.w3.org/2000/svg"
 				width="24" height="24" viewBox="0 0 24 24" fill="none"
 				stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -61,6 +61,13 @@ class Navmenu extends HTMLElement {
 			</svg>Sign Out
 		</div>
 	</div><!-- END OF NAVIGATION PANE -->
+	<dialog id="underconstruction"><!-- MISSING FUNCTIONALITY MODAL -->
+		<h2>Not included in demo</h2>
+		<p>The page you requested has not been included in this demo version.</p>
+		<form method="dialog">
+			<button>Close</button>
+		</form>
+	</dialog><!-- END OF MISSING FUNCTIONALITY MODAL -->
     `;
 
     // Highlighting Logic

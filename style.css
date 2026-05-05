@@ -1,15 +1,4 @@
-:root {
-	--primary-color: #570040;
-	--primary-color-light: #57004080;
-	--primary-color-muted: #57004007;
-	--secondary-color: #052C66;
-	--white-color: #ffffff;
-	--black-color: #000000;
-	--grey-color: #c0c0c0;
-	--red-color: #e03a3a;
-	--amber-color: #e09820;
-	--green-color: #28b355; 
-}
+@import url("theme.css");
 
 a {
 	text-decoration: none;
@@ -38,9 +27,9 @@ button {
 	color: var(--white-color);
 	height: 32px;
 	min-height: 32px;
-	cursor: pointer;
 }
 button:hover {
+	cursor: pointer;
 	box-shadow: 2px 2px 5px var(--primary-color-light);
 }
 
@@ -100,15 +89,17 @@ table {
 	max-width: 100%;
 	border-collapse: collapse;
 }
-
 table td {
 	min-height: 32px;
 	padding: 4px;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	min-width: 52px;
 }
-
+@media (max-width: 512px) {
+	table td {
+		max-width: 50px;
+	}
+}
 table th {
 	min-height: 32px;
 	padding: 4px;

@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<script src="nav.js"></script>
+	<script src="steps.js"></script>
 </head>
 <body>
 <style>
@@ -17,7 +18,9 @@
 		animation: fadeIn 1s forwards;
 		animation-delay: 2s; /* 2-second pause */
 	}
-
+	.step {
+		overflow: hidden;
+	}
 	@keyframes fadeIn {
 		to {
 			opacity: 1;
@@ -29,19 +32,19 @@
 	<div class="main">
 		<h2>Senior Analyst</h2>
 		<hr size="1" />
-		<div class="card-container">
-			<div class="card" style="flex: 1; min-width: calc(100% - 32px);"><!-- CARD -->
-				<h3>Demonstrating skills</h3>
-
-				<div class="step">
+			<div style="width: 400px; float: left;"><!-- STEPS IMAGE -->
+				<script>fiveSteps(1, 2, 2)</script>
+			</div><!-- END OF STEPS IMAGE -->
+				<div class="step"><!-- INTRODUCTION -->
+					<h3>Demonstrating skills</h3>
 					<p class="type-me">Now that you have successfully identified the requirements for a senior analyst,
 						let's break down what you will need to demonstrate in order to be considered for that position.
 						You will also want to review your results with someone who hires senior analysts,
 						to validate your understanding and eliminate any ambiguity in how requirements are measured.
 					</p>
 					<br />&nbsp;<br /><a onclick="revealNext(this)">(Click to continue)</a>	
-				</div>
-				<div class="step" style="display: none;">
+				</div><!-- END OF INTRODUCTION -->
+				<div class="step" style="display: none;"><!-- FIRST REQUIREMENT -->
 					<p class="type-me">
 						The first requirement you listed is to have been in an analyst position for at least one year.
 						Since you have been an analyst since September 8, 2023, you easily meet this requirement.
@@ -49,8 +52,8 @@
 					<label for="jr1">Time in grade requirement</label>
 					<input type="checkbox" checked id="jr1" name="jr1"></input>
 					<br />&nbsp;<br /><a onclick="revealNext(this)">(Click to continue)</a>
-				</div>
-				<div class="step" style="display:none">
+				</div><!-- END OF FIRST REQUIREMENT -->
+				<div class="step" style="display:none"><!-- SECOND REQUIREMENT -->
   					<p class="type-me">
 						The next requirement you listed is to demonstrate advanced proficiency in Microsoft Office products.
 						You clarified that this refers to understanding the basic functionality in Word, Excel, and Outlook,
@@ -62,8 +65,8 @@
 					<label for="jr2b">No</label>
 					<input type="radio" id="yes" name="jr2"></input>
 					<br />&nbsp;<br /><a onclick="revealNext(this)">(Click to continue)</a>
-				</div>
-				<div class="step" style="display:none">
+				</div><!-- END OF SECOND REQUIREMENT -->
+				<div class="step" style="display:none;"><!-- THIRD REQUIREMENT -->
   					<p class="type-me">
 						The third requirement was to demonstrate professional communication style.
 						The most reliable way to validate this is to ask for direct feedback from your current supervisor 
@@ -76,7 +79,7 @@
 					<input type="radio" id="yes" name="jr3"></input>
 					<br />&nbsp;<br />
 					<a onclick="revealNext(this)">(Click to continue)</a>
-				</div>
+				</div><!-- END OF THIRD REQUIREMENT -->
 				<div class="step" style="display:none">
   					<p class="type-me">
 						The fourth requirement was establishing a history of proactive project ownership and problem solving.
@@ -101,9 +104,7 @@
 					<textarea id="jr5" name="jr5" rows="6" cols="50"></textarea><br />
 				</div>
 				</form>
-			</div><!-- END OF CARD -->
 
-		</div><!-- END OF CARD CONTAINER -->
 	</div><!-- END OF MAIN SECTION -->
 
 <script>

@@ -31,10 +31,11 @@ function getAnimatedThermometerSVG(endDegrees, heightPx) {
   const svg = `
 <svg viewBox="${viewBoxX} ${viewBoxY} ${viewBoxWidth} ${viewBoxHeight}"
      width="${finalWidth}" height="${finalHeight}"
-     xmlns="http://www.w3.org/2000/svg">
+     xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5)); overflow: visible;">
+
   <!-- Thermometer body -->
   <rect x="1" y="-34" width="45" height="105" fill="var(--white-color)"
-        stroke="#000" stroke-width="0.5" rx="5" />
+        stroke="var(--black-color)" stroke-width="0.5" rx="5" />
 
   <!-- Colored mercury -->
   <path d="M29.36 37.78a1 1 0 0 1-.46-.84V-16.94a6 6 0 0 0-6-6 6 6 0 0 0-6 6V36.94a1 1 0 0 1-.46.84 12.19 12.19 0 0 0-5.52 10.76A12 12 0 0 0 35 48a12.19 12.19 0 0 0-5.64-10.22Z"
@@ -47,7 +48,7 @@ function getAnimatedThermometerSVG(endDegrees, heightPx) {
 
   <!-- Outline of mercury bulb and stem -->
   <path d="M29.36 37.78a1 1 0 0 1-.46-.84V-17a6 6 0 0 0-6-6 6 6 0 0 0-6 6V36.94a1 1 0 0 1-.46.84 12.19 12.19 0 0 0-5.52 10.76A12 12 0 0 0 35 48a12.19 12.19 0 0 0-5.64-10.22Z"
-        fill="none" stroke="var(--black-color)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="0.5"/>
+        fill="none" stroke="var(--black-color)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="0.5" />
 
   <!-- Tick marks -->
   <path d="M29-17.3h-1.5M29-11.6h-1.5M29-6h-1.5M29-.3h-1.5M29 5.3h-1.5M29 10.9h-1.5M29 16.6h-1.5M29 22.2h-1.5M29 27.9h-1.5M29 33.5h-1.5" stroke="var(--black-color)" stroke-width="0.3"/>

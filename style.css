@@ -33,6 +33,21 @@ button:hover {
 	box-shadow: 2px 2px 5px var(--primary-color-light);
 }
 
+dialog {
+	border: 1px solid var(--primary-color);
+	border-radius: 8px;
+}
+@media (max-width: 511px) {
+	dialog {
+		width: 100%;
+	}
+}
+@media (min-width: 512px) {
+	dialog {
+		width: 50%;
+	}
+}
+
 h1 {
 	font-size: 48px;
 	font-weight: lighter;
@@ -95,7 +110,7 @@ table td {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-@media (max-width: 512px) {
+@media (max-width: 511px) {
 	table td {
 		max-width: 50px;
 	}
@@ -120,7 +135,7 @@ table tr:nth-child(odd) {
 	box-shadow: 5px 5px 10px var(--primary-color-light);
 	background-color: var(--primary-color-muted);
 }
-@media (max-width: 512px) {
+@media (max-width: 511px) {
 	.card  {
 		min-width: calc(100% - 32px); 	 /* takes up full width when only one wide */
 	}

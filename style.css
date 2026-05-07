@@ -109,6 +109,7 @@ table td {
 	padding: 4px;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 @media (max-width: 511px) {
 	table td {
@@ -125,6 +126,7 @@ table th {
 	text-align: left;
 	border-bottom: 2px solid var(--primary-color);	
 }
+
 table tr:hover td {
 	color: var(--white-color);
 	background-color: var(--primary-color-light);

@@ -65,9 +65,9 @@ header {
 }
 
 input[type="radio"] {	/* Hide the default radio button visually but keep it focusable */
-  opacity: 0;
-  position: fixed;
-  width: 0;
+	opacity: 0;
+	position: fixed;
+	width: 0;
 }
 input[type="radio"] + label {
 	border: none;
@@ -87,8 +87,8 @@ input[type="radio"]:checked + label { /* Selected state: Targets label immediate
 	color: white;
 }
 input[type="radio"]:focus-visible + label { /* Focus state for accessibility (when tabbing) */
-  outline: 2px solid var(--primary-color);
-  outline-offset: 1px;
+	outline: 2px solid var(--primary-color);
+	outline-offset: 1px;
 }
 
 footer {
@@ -101,29 +101,22 @@ footer {
 
 table {
 	width: 100%;
-	max-width: 100%;
 	border-collapse: collapse;
+	table-layout: auto; /* Required for columns to hug content */
 }
-table td {
-	min-height: 32px;
+
+table td, table th {	/* 1. All data columns shrink to hug their content */
 	padding: 4px;
-	overflow: hidden;
-	text-overflow: ellipsis;
+	width: 0.1%;	/* Force shrink-wrap */
 	white-space: nowrap;
+	text-align: left;
 }
-@media (max-width: 511px) {
-	table td {
-		max-width: 50px;
-	}
-}
-table td:last-child {
+
+table td:last-child {	/* 3. The Filler Column: Absorbs 100% of remaining space */
 	width: 100%;
 }
 
 table th {
-	min-height: 32px;
-	padding: 4px;
-	text-align: left;
 	border-bottom: 2px solid var(--primary-color);	
 }
 
@@ -144,6 +137,7 @@ table tr:nth-child(odd) {
 	margin-bottom: 16px;
 	box-shadow: 5px 5px 10px var(--primary-color-light);
 	background-color: var(--primary-color-muted);
+	overflow-x: hidden;
 }
 @media (max-width: 511px) {
 	.card  {

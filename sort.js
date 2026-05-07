@@ -1,4 +1,4 @@
-let sortDirections = [1, 1, 1]; // 1 = asc, -1 = desc per column
+let sortDirections = [1, 1, 1, 1]; // 1 = asc, -1 = desc per column
 let sortedColumn = -1;         // which column is currently sorted
 
 document.addEventListener("DOMContentLoaded", () => {

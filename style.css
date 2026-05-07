@@ -115,11 +115,19 @@ table td {
 		max-width: 50px;
 	}
 }
+table td:last-child {
+	width: 100%;
+}
+
 table th {
 	min-height: 32px;
 	padding: 4px;
 	text-align: left;
 	border-bottom: 2px solid var(--primary-color);	
+}
+table tr:hover td {
+	color: var(--white-color);
+	background-color: var(--primary-color-light);
 }
 table tr:nth-child(even) {
 	background-color: var(--primary-color-muted);

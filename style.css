@@ -102,18 +102,36 @@ footer {
 table {
 	width: 100%;
 	border-collapse: collapse;
-	table-layout: auto; /* Required for columns to hug content */
+
 }
 
-table td, table th {	/* 1. All data columns shrink to hug their content */
+table td, table th {	/* All data columns shrink to hug their content */
 	padding: 4px;
 	width: 0.1%;	/* Force shrink-wrap */
 	white-space: nowrap;
 	text-align: left;
+	text-overflow: ellipsis;
 }
-
-table td:last-child {	/* 3. The Filler Column: Absorbs 100% of remaining space */
-	width: 100%;
+@media (max-width: 511px) {
+	table td, table th {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		width: auto; 
+	}
+	table:has(th:first-child:nth-last-child(4)) th,
+	table:has(th:first-child:nth-last-child(4)) td {
+		max-width: calc(25vw - 32px);
+	}
+	table:has(th:first-child:nth-last-child(3)) th,
+	table:has(th:first-child:nth-last-child(3)) td {
+		max-width: calc(33vw - 32px);
+	}
+}
+@media (min-width: 512px) {
+	table td:last-child {	/* The Filler Column: Absorbs 100% of remaining space */
+		width: 100%;
+	}
 }
 
 table th {
